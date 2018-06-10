@@ -1,0 +1,123 @@
+/*RESPONSIVE IMAGES*/
+
+header .header-img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.featured-work .featured-img {
+    width: 100%;
+    max-width: 480px;
+}
+
+.responsive-img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/*GENERAL SIZE OF HEADERS AND TEXT*/
+
+.text-item {
+    font-size: 5vw;
+}
+
+.text-header {
+    font-size: 7vw;
+}
+
+
+/*Minor breaking point that is fit for mobile screens*/
+
+@media screen and (min-width: 450px) {
+    .header-text {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .text-header {
+        font-size: 6vw;
+    }
+    .text-item {
+        font-size: 4vw;
+    }
+    .featured-img {
+        width: 100%;
+    }
+}
+
+
+/*Makes sure that the logo and text are side by side and not on top of each other.*/
+
+@media screen and (max-width: 719px) {
+    .header .header-logo {
+        float: left;
+    }
+}
+
+
+/*AT 720PX, the header and featured tags are called and the displays are no longer blocks, but they will become flexboxes, 
+the featured work section and all of its content will now be side by side instead of on top of each other like in mobile, 
+the header text will align to the right, and content will be spaced out evenly.*/
+
+@media screen and (min-width: 720px) {
+    .header {
+        justify-content: space-between;
+        text-align: left;
+        margin: 0 auto 30px;
+    }
+    .header-text {
+        text-align: right;
+    }
+    .header,
+    .featured-inner {
+        display: flex;
+    }
+    .featured-inner {
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+    .featured-item {
+        margin: 20px 20px 20px 0;
+    }
+    .featured-item:last-child {
+        margin-right: 0;
+    }
+}
+
+
+/*AT 830PX AND 1030PX the font-sizes for the headers and a specific piece of text change sizes relative to the viewport's width by 1%*/
+
+@media screen and (min-width: 830px) {
+    .text-header {
+        font-size: 4vw;
+    }
+    .text-item {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    .text-header {
+        font-size: 3vw;
+    }
+    .text-item {
+        font-size: 1vw;
+    }
+}
+
+
+/*960PX IS THE POINT WHERE THE PAGE IS SET AT AN EASY TO SEE AND INTERACTIVE POSITION ON A LARGE SCREEN*/
+
+@media screen and (min-width: 960px) {
+    .header,
+    main,
+    .content {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
